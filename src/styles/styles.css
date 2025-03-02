@@ -1,0 +1,46 @@
+body{
+    background-color: black;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.title span {
+    color: #FFB300; /* Highlighted color */
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #cfcfcf;
+    text-align: left;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: black;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background: white;
+    color: black;
+}
+.test  {
+    color: white;
+}
