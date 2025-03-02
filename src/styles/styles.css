@@ -13,7 +13,7 @@ body{
 }
 
 .title span {
-    color: #FFB300; /* Highlighted color */
+    color: #FFB300; 
 }
 
 .subtitle {
@@ -28,9 +28,9 @@ body{
     padding: 12px 24px;
     font-size: 1rem;
     font-weight: bold;
-    color: white;
+    color: #FFB300;
     background: black;
-    border: 2px solid white;
+    border: 2px solid #FFB300;
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
