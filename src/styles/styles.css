@@ -65,3 +65,10 @@ body{
     padding: 10px 20px; 
   }
   
+  .collectionContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  

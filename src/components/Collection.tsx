@@ -1,20 +1,22 @@
-interface  CollectionProps{
-    imgCollection: string;
-    tittle: string;
-    text: string;
+import styles from "../styles/Collection.module.css";
+
+interface CollectionProps {
+  imgCollection: string;
+  title: string;
+  text: string;
 }
 
-export default function Collection({imgCollection,tittle,text}: CollectionProps){
-    return(
-        <div className="collectionContainer">
-            <div className="imgContainer">
-                <img src={imgCollection} alt=""/>
-            </div>
-            <div className="infoContainer">
-                <h1>{tittle}</h1>
-                <p>{text}</p>
-                <button>LOAD MORE</button>
-            </div>
-        </div>
-    );
+export default function Collection({ imgCollection, title, text }: CollectionProps) {
+  return (
+    <div className={styles.collectionContainer}>
+      <div className={styles.imgContainer}>
+        <img src={imgCollection} alt="Collection Image"/>
+      </div>
+      <div className={styles.infoContainer}>
+        <h2 className={styles.title}>{title}</h2>
+        <p className={styles.text}>{text}</p>
+        <button className={styles.loadMoreBtn}>VER MAS</button>
+      </div>
+    </div>
+  );
 }
