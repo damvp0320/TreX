@@ -2,15 +2,32 @@
 
 * {
     font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 32px;
     background: #0D0D0D;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.hidden {
+    transform: translateY(-100%);
+}
+
+.visible {
+    transform: translateY(0);
 }
 
 .logo {
@@ -35,6 +52,7 @@
     font-weight: 500;
     padding: 8px 12px;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
 .navLinks a:hover {
@@ -51,9 +69,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
     padding: 10px 0;
+    min-width: 150px;
 }
 
-.dropdown:hover .dropdownMenu {
+.dropdown:hover > .dropdownMenu {
     display: block;
 }
 
@@ -64,13 +83,14 @@
 
 .dropdownMenu li a {
     color: #B0B0B0;
+    transition: color 0.3s ease;
 }
 
 .dropdownMenu li a:hover {
-    color: #1E75BB;
+    color: #FFB300;
 }
 
-/* Botón de contacto */
+/* Botón de compra */
 .contactButton {
     background: #ad7900;
     color: white;

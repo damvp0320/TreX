@@ -1,63 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 import styles from "../styles/navbar.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  let lastScrollY = 0;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsVisible(currentScrollY < lastScrollY || currentScrollY === 0);
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} ${isVisible ? styles.visible : styles.hidden}`}>
       <div className={styles.logo}>TreX</div>
 
-      {/* Enlaces de navegación */}
+      {/* Navigation Links */}
       <ul className={`${styles.navLinks} ${isOpen ? styles.active : ""}`}>
-        <li><a href="#">Inicio</a></li>
-
-        {/* Menú Hombres */}
-        <li className={styles.dropdown}>
-          <a href="#">Hombres ▾</a>
-          <ul className={styles.dropdownMenu}>
-            <li><a href="#">Sneakers</a></li>
-            <li><a href="#">Botas</a></li>
-            <li><a href="#">Sandalias</a></li>
-            <li><a href="#">Deportivos</a></li>
-          </ul>
-        </li>
-
-        {/* Menú Mujeres */}
-        <li className={styles.dropdown}>
-          <a href="#">Mujeres ▾</a>
-          <ul className={styles.dropdownMenu}>
-            <li><a href="#">Sneakers</a></li>
-            <li><a href="#">Botas</a></li>
-            <li><a href="#">Sandalias</a></li>
-            <li><a href="#">Deportivos</a></li>
-          </ul>
-        </li>
-
-        {/* Ofertas */}
-        <li><a href="#">Ofertas</a></li>
-
-        {/* Nuevas Colecciones */}
-        <li><a href="#">Nuevas Colecciones</a></li>
-
-        {/* Accesorios */}
-        <li className={styles.dropdown}>
-          <a href="#">Accesorios ▾</a>
-          <ul className={styles.dropdownMenu}>
-            <li><a href="#">Calcetines</a></li>
-            <li><a href="#">Plantillas</a></li>
-            <li><a href="#">Cuidado del calzado</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#">Contacto</a></li>
+        <li><Link to="hero" smooth={true} duration={500}>Inicio</Link></li>
+        <li><Link to="men" smooth={true} duration={500}>Hombres</Link></li>
+        <li><Link to="women" smooth={true} duration={500}>Mujeres</Link></li>
+        <li><Link to="offers" smooth={true} duration={500}>Ofertas</Link></li>
+        <li><Link to="new-collection" smooth={true} duration={500}>Nuevas Colecciones</Link></li>
+        <li><Link to="accessories" smooth={true} duration={500}>Accesorios</Link></li>
+        <li><Link to="contact" smooth={true} duration={500}>Contacto</Link></li>
       </ul>
 
-      {/* Botón de contacto */}
+      {/* Buy Button */}
       <a href="#" className={styles.contactButton}>Comprar ahora</a>
 
-      {/* Menú móvil */}
+      {/* Mobile Menu Button */}
       <button className={styles.menuIcon} onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>

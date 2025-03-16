@@ -1,4 +1,4 @@
-import styles from "../styles/Accesories.module.css";
+import styles from "../styles/Accessories.module.css";
 
 const Accessories = () => {
   return (
