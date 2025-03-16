@@ -1,0 +1,40 @@
+.parallaxContainer {
+    position: relative;
+    height: 800px; /* Aumentado para mayor impacto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.5); /* Un poco más oscuro para mayor contraste */
+    padding: 50px 80px; /* Más grande para mejor presencia */
+    border-radius: 12px;
+  }
+  
+  .title {
+    font-size: 3rem; /* Aumentado para más impacto */
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .button {
+    padding: 16px 32px; /* Botón más grande y llamativo */
+    background: white;
+    color: black;
+    font-size: 1.2rem; /* Letra más grande */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background: #FFB300;
+    color: white;
+    transform: scale(1.05); /* Efecto sutil al pasar el mouse */
+  }
+  

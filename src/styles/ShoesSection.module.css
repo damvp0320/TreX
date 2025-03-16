@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background-color: #121212;
+  color: white;
+}
+
+.reverse {
+  flex-direction: row-reverse; /* Swap image and text position */
+}
+
+.textContainer {
+  max-width: 50%;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.button {
+  padding: 12px 24px;
+  background: #ffb300;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: white;
+  color: black;
+}
+
+.imageContainer {
+  max-width: 45%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 179, 0, 0.3);
+}
