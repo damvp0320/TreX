@@ -59,7 +59,6 @@
     color: #FFB300;
 }
 
-/* Menús desplegables */
 .dropdownMenu {
     display: none;
     position: absolute;
@@ -90,7 +89,6 @@
     color: #FFB300;
 }
 
-/* Botón de compra */
 .contactButton {
     background: #ad7900;
     color: white;
@@ -105,7 +103,6 @@
     background: #5e4200;
 }
 
-/* Menú móvil */
 .menuIcon {
     display: none;
     background: none;

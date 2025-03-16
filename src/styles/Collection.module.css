@@ -45,7 +45,6 @@
     margin-top: 20px;
   }
   
-  /* Creating the filling effect */
   .loadMoreBtn::before {
     content: "";
     position: absolute;

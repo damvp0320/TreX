@@ -4,10 +4,8 @@ const Accessories = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        {/* Left side with title */}
         <h1 className={styles.title}>ACCESORIOS</h1>
 
-        {/* Right side with images */}
         <div className={styles.imagesContainer}>
           <div className={styles.imageBox}>
             <img

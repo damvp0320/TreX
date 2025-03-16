@@ -23,7 +23,6 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${isVisible ? styles.visible : styles.hidden}`}>
       <div className={styles.logo}>TreX</div>
 
-      {/* Navigation Links */}
       <ul className={`${styles.navLinks} ${isOpen ? styles.active : ""}`}>
         <li><Link to="hero" smooth={true} duration={500}>Inicio</Link></li>
         <li><Link to="men" smooth={true} duration={500}>Hombres</Link></li>
@@ -34,10 +33,8 @@ export default function Navbar() {
         <li><Link to="contact" smooth={true} duration={500}>Contacto</Link></li>
       </ul>
 
-      {/* Buy Button */}
       <a href="#" className={styles.contactButton}>Comprar ahora</a>
 
-      {/* Mobile Menu Button */}
       <button className={styles.menuIcon} onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>

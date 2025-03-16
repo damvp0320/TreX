@@ -8,7 +8,7 @@
 }
 
 .reverse {
-  flex-direction: row-reverse; /* Swap image and text position */
+  flex-direction: row-reverse; 
 }
 
 .textContainer {
