@@ -1,0 +1,6 @@
+/* Si no tienes el archivo Gallery.css, créalo o usa el archivo que usas para estilos globales */
+body {
+    background-color: #000000;  /* Color de fondo claro */
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }

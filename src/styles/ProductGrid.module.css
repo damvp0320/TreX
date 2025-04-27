@@ -1,0 +1,64 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 24px;
+  }
+  
+  .card {
+    background-color: #313131;
+    border: 1px solid #313131;
+    padding: 16px;
+    width: 260px;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 12px;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .price {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
+
+  }
+  
+  .name {
+    font-size: 16px;
+    color: #cecece;
+  }
+  
+  .category {
+    font-size: 14px;
+    color: #949494;
+  }
+  
+  .colors {
+    font-size: 14px;
+    color: #949494;
+  }
+  
+  .shipping {
+    font-size: 14px;
+    color: #FFB300;
+  }
+  
