@@ -23,3 +23,4 @@ const ShoesSection: React.FC<ShoesSectionProps> = ({ title, description, imageUr
 };
 
 export default ShoesSection;
+
