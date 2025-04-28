@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import styles from "../styles/navbar.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { IoCartSharp } from "react-icons/io5";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,9 +33,10 @@ export default function Navbar() {
         <li><Link to="accessories" smooth={true} duration={500}>Accesorios</Link></li>
         <li><Link to="contact" smooth={true} duration={500}>Contacto</Link></li>
       </ul>
-
-      <a href="#" className={styles.contactButton}>Comprar ahora</a>
-
+      <div className={styles.buyingContainer}>
+        <a><Link className={styles.carContainer} to="contact" duration={500}><IoCartSharp className={styles.carIcon} /></Link></a>
+        <a href="#" className={styles.contactButton}>Comprar ahora</a>
+      </div>
       <button className={styles.menuIcon} onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
